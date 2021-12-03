@@ -64,6 +64,7 @@ export async function notifySlack(monitor, operational) {
 }
 
 export async function notifyTelegram(monitor, operational) {
+  // Convert to my own service.
   const text = `Monitor *${monitor.name.replace(
     '-',
     '\\-',
@@ -73,11 +74,14 @@ export async function notifyTelegram(monitor, operational) {
   }\` \\- 👀 [Status Page](${config.settings.url})`
 
   const payload = new FormData()
-  payload.append('chat_id', SECRET_TELEGRAM_CHAT_ID)
-  payload.append('parse_mode', 'MarkdownV2')
+  // payload.append('chat_id', SECRET_TELEGRAM_CHAT_ID)
+  // payload.append('parse_mode', 'MarkdownV2')
+  payload.append('token', SECRET_TELEGRAM_API_TOKEN)
+  payload.append('card', '1')
+  payload.append('title', 'Websites Status Monitor')
   payload.append('text', text)
 
-  const telegramUrl = `https://api.telegram.org/bot${SECRET_TELEGRAM_API_TOKEN}/sendMessage`
+  const telegramUrl = `https://api.animo.top/dingtalk/send`
   return fetch(telegramUrl, {
     body: payload,
     method: 'POST',
