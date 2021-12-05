@@ -15,45 +15,45 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: www-animo-top # unique identifier
-    name: Animo's Homepage
-    description: '' # default=empty
-    url: 'https://www.animo.top/' # URL to fetch
-    method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
-    followRedirect: true # should fetch follow redirects, default=false
-    linkable: true # allows the title to be a link, default=true
+  # - id: www-animo-top # unique identifier
+  #   name: Animo's Homepage
+  #   description: '' # default=empty
+  #   url: 'https://www.animo.top/' # URL to fetch
+  #   method: GET # default=GET
+  #   expectStatus: 200 # operational status, default=200
+  #   followRedirect: true # should fetch follow redirects, default=false
+  #   linkable: true # allows the title to be a link, default=true
     
-  - id: blog-animo-top
-    name: Animo's Blog
-    url: 'https://blog.animo.top/'
-    method: GET
-    expectStatus: 200
-    followRedirect: true
-    linkable: true
+  # - id: blog-animo-top
+  #   name: Animo's Blog
+  #   url: 'https://blog.animo.top/'
+  #   method: GET
+  #   expectStatus: 200
+  #   followRedirect: true
+  #   linkable: true
   
-  - id: pan-animo.top
+  - id: share-animo.top
     name: Onedrive Index
-    url: 'https://pan.animo.top/'
+    url: 'https://share.animo.top/'
     method: GET
     expectStatus: 200
     followRedirect: true
     linkable: true
 
-  - id: img-animo-top
-    name: Image Hosting Service
-    url: 'https://i.animo.top/'
-    method: GET
-    expectStatus: 200
-    linkable: true
+  # - id: img-animo-top
+  #   name: Image Hosting Service
+  #   url: 'https://i.animo.top/'
+  #   method: GET
+  #   expectStatus: 200
+  #   linkable: true
 
-  - id: api-animo-top
-    name: Some Private API services
-    description: ''
-    url: 'https://api.animo.top/dingtalk/'
-    method: GET
-    expectStatus: 200
-    linkable: false # allows the title to be a link, default=true
+  # - id: api-animo-top
+  #   name: Some Private API services
+  #   description: ''
+  #   url: 'https://api.animo.top/dingtalk/'
+  #   method: GET
+  #   expectStatus: 200
+  #   linkable: false # allows the title to be a link, default=true
 
 #   - id: blog-cloudflare-com
 #     name: The Cloudflare Blog
